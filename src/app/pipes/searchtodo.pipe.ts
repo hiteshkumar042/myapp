@@ -15,8 +15,5 @@ export class SearchtodoPipe implements PipeTransform {
     return todos.filter((todo: any) => {
       return todo.title.toLowerCase().includes(text)
     })
-    
-
   }
-
 }

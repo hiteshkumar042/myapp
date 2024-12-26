@@ -10,10 +10,5 @@ import { CounterComponent } from '../components/counter/counter.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  message = signal('there from greeting page');
-  
-
-  keyUpHandler(ev:KeyboardEvent){
-    console.log(ev.key);
-  }
+  message = signal('Hello There!');
 }

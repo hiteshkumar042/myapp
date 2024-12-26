@@ -4,14 +4,15 @@
 <span>Loading......</span>
 }
 
+@if (todoItems().length) {
 <form>
     <label for="">Filters Todos</label>
     <div style="margin: 10px 0">
         <input type="text" placeholder="search todo.." name="searchTerm" [(ngModel)]="searchTerm">
     </div>
 </form>
+}
 
-@if (todoItems().length) {
 <ul class="todos">
     @for (todo of todoItems() | searchtodo:searchTerm(); track todo.id) {
     <li class="todos__item" appHighlighttask [isCompleted]="todo.completed">
@@ -20,4 +21,3 @@
     </li>
     }
 </ul>
-}
